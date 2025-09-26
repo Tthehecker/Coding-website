@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Java Example Project</h1>
+        <p>This page showcases Java code examples and programming concepts.</p>
+        
+        <div class="content">
+            <h2>Java Programming Examples</h2>
+            <p>Below are various Java programming concepts demonstrated:</p>
+            
+            <div class="code-section">
+                <h3>1. Basic Class Structure</h3>
+                <pre><code>public class JavaExample {
+    private String projectName;
+    private int currentYear;
+    
+    public JavaExample() {
+        this.projectName = "Java Examples";
+        this.currentYear = 2025;
+    }
+    
+    public String greetUser(String name) {
+        return "Hello, " + name + "! Welcome to " + projectName;
+    }
+}</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>2. Arrays and Collections</h3>
+                <pre><code>import java.util.*;
+
+// Working with arrays and lists
+int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+List&lt;Integer&gt; evenNumbers = new ArrayList&lt;&gt;();
+
+for (int num : numbers) {
+    if (num % 2 == 0) {
+        evenNumbers.add(num);
+    }
+}
+
+System.out.println("Even numbers: " + evenNumbers);</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>3. Object-Oriented Programming</h3>
+                <pre><code>public class Calculator {
+    private List&lt;String&gt; history;
+    
+    public Calculator() {
+        this.history = new ArrayList&lt;&gt;();
+    }
+    
+    public int add(int a, int b) {
+        int result = a + b;
+        history.add(a + " + " + b + " = " + result);
+        return result;
+    }
+    
+    public List&lt;String&gt; getHistory() {
+        return new ArrayList&lt;&gt;(history);
+    }
+}</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>4. Exception Handling</h3>
+                <pre><code>public String safeDivide(int a, int b) {
+    try {
+        double result = (double) a / b;
+        return a + " / " + b + " = " + result;
+    } catch (ArithmeticException e) {
+        return "Error: Cannot divide by zero!";
+    } catch (Exception e) {
+        return "Error: " + e.getMessage();
+    }
+}</code></pre>
+            </div>
+            
+            <button id="view-code">View Full Java Code</button>
+            <div id="full-code" style="display: none;">
+                <h3>Complete Java Example (example.java)</h3>
+                <pre id="java-code"></pre>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="back-link">← Back to Projects Hub</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

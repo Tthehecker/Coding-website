@@ -1,4 +1,10 @@
-# Python Example Project
+document.addEventListener('DOMContentLoaded', function() {
+    const viewCodeButton = document.getElementById('view-code');
+    const fullCodeDiv = document.getElementById('full-code');
+    const pythonCodePre = document.getElementById('python-code');
+    
+    // Python code content to display
+    const pythonCode = `# Python Example Project
 # This file demonstrates various Python concepts and features
 
 print("🐍 Python Example Project Loaded!")
@@ -52,16 +58,16 @@ class Calculator:
 def write_example_file():
     try:
         with open("example_output.txt", "w") as file:
-            file.write("This is an example file created by Python!\n")
-            file.write(f"Project: {project_info['name']}\n")
-            file.write(f"Features: {', '.join(project_info['features'])}\n")
+            file.write("This is an example file created by Python!\\n")
+            file.write(f"Project: {project_info['name']}\\n")
+            file.write(f"Features: {', '.join(project_info['features'])}\\n")
         return "File written successfully!"
     except Exception as e:
         return f"Error writing file: {e}"
 
 # 7. Main demo function
 def run_demo():
-    print("\n=== Python Demo Started ===")
+    print("\\n=== Python Demo Started ===")
     
     # Basic operations
     print(greet_user("Coder"))
@@ -87,7 +93,7 @@ def run_demo():
     file_result = write_example_file()
     print(f"File operation: {file_result}")
     
-    print("=== Demo Complete ===\n")
+    print("=== Demo Complete ===\\n")
 
 # 8. Exception handling example
 def safe_divide(a, b):
@@ -104,7 +110,7 @@ if __name__ == "__main__":
     run_demo()
     
     # Additional examples
-    print("\nAdditional Examples:")
+    print("\\nAdditional Examples:")
     print(safe_divide(10, 2))
     print(safe_divide(10, 0))
     
@@ -116,4 +122,22 @@ if __name__ == "__main__":
             a, b = b, a + b
     
     fib_numbers = list(fibonacci_generator(10))
-    print(f"First 10 Fibonacci numbers: {fib_numbers}")
+    print(f"First 10 Fibonacci numbers: {fib_numbers}")`;
+    
+    let isCodeVisible = false;
+    
+    viewCodeButton.addEventListener('click', function() {
+        if (!isCodeVisible) {
+            pythonCodePre.textContent = pythonCode;
+            fullCodeDiv.style.display = 'block';
+            viewCodeButton.textContent = 'Hide Python Code';
+            isCodeVisible = true;
+        } else {
+            fullCodeDiv.style.display = 'none';
+            viewCodeButton.textContent = 'View Full Python Code';
+            isCodeVisible = false;
+        }
+    });
+    
+    console.log('Python Example page loaded successfully!');
+});

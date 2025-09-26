@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Python Example Project</h1>
+        <p>This page showcases Python code examples and concepts.</p>
+        
+        <div class="content">
+            <h2>Python Code Examples</h2>
+            <p>Below are various Python programming concepts demonstrated:</p>
+            
+            <div class="code-section">
+                <h3>1. Basic Variables and Functions</h3>
+                <pre><code># Variables and basic function
+def greet_user(name="Developer"):
+    return f"Hello, {name}! Welcome to Python!"
+
+project_name = "Python Examples"
+current_year = 2025
+print(greet_user("Coder"))</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>2. Lists and List Comprehensions</h3>
+                <pre><code># Working with lists
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = [n for n in numbers if n % 2 == 0]
+squared_numbers = [n**2 for n in numbers]
+print(f"Even numbers: {even_numbers}")
+print(f"Squared numbers: {squared_numbers}")</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>3. Classes and Objects</h3>
+                <pre><code># Object-oriented programming
+class Calculator:
+    def __init__(self):
+        self.history = []
+    
+    def add(self, a, b):
+        result = a + b
+        self.history.append(f"{a} + {b} = {result}")
+        return result
+    
+    def get_history(self):
+        return self.history
+
+calc = Calculator()
+print(calc.add(10, 5))</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h3>4. Dictionary Operations</h3>
+                <pre><code># Working with dictionaries
+student = {
+    "name": "Alice",
+    "age": 20,
+    "courses": ["Python", "JavaScript", "HTML"]
+}
+
+# Dictionary comprehension
+grades = {course: 95 for course in student["courses"]}
+print(f"Student: {student['name']}")
+print(f"Grades: {grades}")</code></pre>
+            </div>
+            
+            <button id="view-code">View Full Python Code</button>
+            <div id="full-code" style="display: none;">
+                <h3>Complete Python Example (example.py)</h3>
+                <pre id="python-code"></pre>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="back-link">← Back to Projects Hub</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
